@@ -1,0 +1,15 @@
+<form  [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <label  for="name">Nome:</label>
+    <input  formControlName="name" id="name" type="text">
+    <label for="surname">Cognome:</label>
+    <input formControlName="surname" id="surname" type="text">
+    <label for="email">E-mail:</label>
+    <input formControlName="email" id="email" type="text">
+    <label for="dateOfBirth">Data di nascita</label>
+    <input formControlName="dateOfBirth" id="dateOfBirth" type="date">
+    <label for="placeOfBirth">Luogo di nascita</label>
+    <input formControlName="placeOfBirth" id="placeOfBirth" type="text">
+    <label for="residence">Residenza</label>
+    <input formControlName="residence" id="residence" type="text">
+    <button [disabled]="!myForm.valid" type="submit">Invia</button>
+</form>
